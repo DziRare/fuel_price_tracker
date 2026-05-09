@@ -73,13 +73,21 @@ def retrieve_nearby_fuel_prices(latitude, longitude, fueltype="U91", radius=5):
     with open("nearby_prices.json", "w") as file:
         file.write(json.dumps(data, indent=4))
 
-# entering the location name
-location = agent.geocode(input("Enter location: "))
-fuel = input("Enter fuel type you're looking for: ")
-distance = int(input("Enter the distance (km) you would like the station to be in: "))
 
+#Entering details to retrieve fuel data
+location = agent.geocode(input("Enter location: "))
+distance = ""
 if location:
-    retrieve_nearby_fuel_prices(location.latitude, location.longitude, fuel, distance)
+    fuel = input("Enter fuel type you're looking for: ")
+    if fuel in ["DL", "E10", "P95", "P98", "U91", "DL", "PDL", "EV", "LPG"]:
+        while distance == "":
+            try:
+                distance = int(input("Enter the distance (km) you would like the station to be in: "))
+            except ValueError:
+                print("Distance must be integer value.")
+        retrieve_nearby_fuel_prices(location.latitude, location.longitude, fuel, distance)
+    else:
+        print("Invalid fuel type.")
 else:
     print("Location not found.")
 
