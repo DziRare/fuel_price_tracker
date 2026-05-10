@@ -2,111 +2,49 @@ import requests
 import json
 import base64
 import os
-from dotenv import load_dotenv
+import uuid
+# from dotenv import load_dotenv
 import datetime
 from geopy.geocoders import Nominatim
-
-# url = "https://jsonplaceholder.typicode.com/posts"
-# response = requests.get(url)
-
-# if response.status_code == 200:
-#     print("Request was successful!")
-#     data = response.json()
-# else:
-#     print(f"Failed to retrieve data. Status code: {response.status_code}")
-
-# with open("station_data.json", "w") as file:
-#     file.write(json.dumps(data, indent=4))
-
-load_dotenv()
-
-api_key = os.getenv("API_KEY")
-api_secret = os.getenv('API_SECRET')
-
-credentials = f"{api_key}:{api_secret}"
-encoded_credentials = base64.b64encode(credentials.encode()).decode()
+from fuel_api import retrieve_nearby_fuel_prices
 
 agent = Nominatim(user_agent="Geopy Library")
-
-#Retriving access token to access NSW Fuel APIs
-def retrieve_access_token(authorization):
-    url = "https://api.onegov.nsw.gov.au/oauth/client_credential/accesstoken"
-    querystring = {
-        "grant_type":"client_credentials"
-    }
-    headers = {
-        'content-type': "application/json",
-        'authorization': f"Basic {authorization}"
-    }
-    response = requests.request("GET", url, headers=headers, params=querystring)
-    data = response.json()
-
-    return data["access_token"]
-
-access_token = retrieve_access_token(encoded_credentials)
-
-#Retrieving all stations and fuel prices within a certian radius
-def retrieve_nearby_fuel_prices(latitude, longitude, fueltype="U91", radius=5):
-    url = "https://api.onegov.nsw.gov.au/FuelPriceCheck/v1/fuel/prices/nearby"
-
-    payload = {
-        "fueltype": fueltype,
-        "brand": [],
-        "namedlocation": "",
-        "latitude": latitude,
-        "longitude": longitude,
-        "radius": radius,
-        "sortby": "Price",
-        "sortascending": True
-    }
-
-    headers = {
-        'authorization': f"Bearer {access_token}",
-        'apikey': api_key,
-        'content-type': "application/json",
-        'transactionid': "letters_n_numbers",
-        'requesttimestamp': f"{datetime.datetime.now()}"
-    }
-
-    response = requests.request("POST", url, json=payload, headers=headers)
-    data = response.json()
-
-    with open("nearby_prices.json", "w") as file:
-        file.write(json.dumps(data, indent=4))
 
 #Displaying information to the user
 def display_info(fuel_type, distance):
     with open("nearby_prices.json") as file:
         data = json.load(file)
-        fuel_stations = data["stations"]
-        fuel_prices = data["prices"]
+        fuel_stations = data['stations']
+        fuel_prices = data['prices']
 
         for station in fuel_stations:
             for fuel in fuel_prices:
-                if station["code"] == fuel["stationcode"]:
+                if station['code'] == fuel['stationcode']:
                     station.update(fuel)
         print("\n--------------------------------------------------------------\n")
         print(f"Here are the nearest petrol stations that serve {fuel_type} fuel within a {distance}km radius:\n")
         for station in fuel_stations:
-            print(f"Price: {station["price"]}")
-            print(f"Name: {station["name"]}")
-            print(f"Address: {station["address"]}")
-            print(f"Fuel: {station["fueltype"]}")
-            print(f"Distance from location: {station["location"]["distance"]}km \n")
+            print(f"Price: {station['price']}")
+            print(f"Name: {station['name']}")
+            print(f"Address: {station['address']}")
+            print(f"Fuel: {station['fueltype']}")
+            print(f"Distance from location: {station['location']['distance']}km \n")
+
+        return fuel_stations
 
 #Entering details to retrieve fuel data
 location = agent.geocode(input("Enter location: "))
 distance = ""
 if location:
-    fuel = input("Enter fuel type you're looking for (DL, E10, P95, P98, U91, DL, PDL, EV, LPG): ")
-    if fuel in ["DL", "E10", "P95", "P98", "U91", "DL", "PDL", "EV", "LPG"]:
+    fuel = input("Enter fuel type you're looking for (DL, E10, P95, P98, U91, PDL, EV, LPG): ")
+    if fuel in ["DL", "E10", "P95", "P98", "U91", "PDL", "EV", "LPG"]:
         while distance == "":
             try:
                 distance = int(input("Enter the distance (km) you would like the station to be in: "))
             except ValueError:
                 print("Distance must be integer value.")
         retrieve_nearby_fuel_prices(location.latitude, location.longitude, fuel, distance)
-        display_info(fuel, distance)
+        display = display_info(fuel, distance)
     else:
         print("Invalid fuel type.")
 else:

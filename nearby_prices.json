@@ -1,512 +1,402 @@
 {
     "stations": [
         {
-            "stationid": "1-3VKUA5I",
+            "stationid": "1-3IGUV46",
             "brandid": "1-GFYV-6",
             "brand": "Metro Fuel",
-            "code": 18703,
-            "name": "METRO FUEL KILLARNEY HEIGHTS",
-            "address": "702-704 WARRINGAH RD, FORESTVILLE NSW 2087",
+            "code": 18216,
+            "name": "Metro Bexley",
+            "address": "630 Forest Road, BEXLEY NSW 2207",
             "location": {
-                "latitude": -33.761761,
-                "longitude": 151.207051,
-                "distance": 4.55
+                "latitude": -33.95941,
+                "longitude": 151.117752,
+                "distance": 1.42
             },
             "isAdBlueAvailable": false
         },
         {
-            "stationid": "1-GN9E-692",
-            "brandid": "1-3U2AAFV",
-            "brand": "EG Ampol",
-            "code": 660,
-            "name": "EG Ampol Chatswood East",
-            "address": "364-366 Eastern Valley Way, Chatswood East NSW 2067",
-            "location": {
-                "latitude": -33.786662,
-                "longitude": 151.201055,
-                "distance": 2.13
-            },
-            "isAdBlueAvailable": false
-        },
-        {
-            "stationid": "1-GPPT-340",
+            "stationid": "1-3SRPZQK",
             "brandid": "1-GFYV-6",
             "brand": "Metro Fuel",
-            "code": 1243,
-            "name": "Metro Castle Cove",
-            "address": "327 Eastern Valley Way, Castle Cove NSW 2069",
+            "code": 18653,
+            "name": "Metro Petroleum South Hurstville",
+            "address": "928-930 KING GEORGES RD, BLAKEHURST NSW 2221",
             "location": {
-                "latitude": -33.784861,
-                "longitude": 151.201044,
-                "distance": 2.24
-            },
-            "isAdBlueAvailable": false
-        },
-        {
-            "stationid": "1-3LJXF2F",
-            "brandid": "1-GFYV-10",
-            "brand": "Speedway",
-            "code": 18422,
-            "name": "Speedway Roseville",
-            "address": "20-22 BABBAGE RD, ROSEVILLE NSW 2069",
-            "location": {
-                "latitude": -33.778021,
-                "longitude": 151.194555,
-                "distance": 2.41
-            },
-            "isAdBlueAvailable": false
-        },
-        {
-            "stationid": "1-GPPT-201",
-            "brandid": "1-GFYV-6",
-            "brand": "Metro Fuel",
-            "code": 1089,
-            "name": "Metro Lane Cove North",
-            "address": "533 MOWBRAY RD WEST, LANE COVE NORTH NSW 2066",
-            "location": {
-                "latitude": -33.805971,
-                "longitude": 151.166274,
-                "distance": 1.74
+                "latitude": -33.981085,
+                "longitude": 151.108476,
+                "distance": 2.0
             },
             "isAdBlueAvailable": true
         },
         {
-            "stationid": "1-2ZJGOOC",
+            "stationid": "1-3VDI0AS",
             "brandid": "1-GFYV-10",
             "brand": "Speedway",
-            "code": 2714,
-            "name": "Speedway Cammeray",
-            "address": "330 Miller St, CAMMERAY NSW 2062",
+            "code": 18696,
+            "name": "Speedway Carss Park",
+            "address": "294 PRINCES HWY, CARSS PARK NSW 2221",
             "location": {
-                "latitude": -33.828713,
-                "longitude": 151.20881,
-                "distance": 4.36
+                "latitude": -33.982002,
+                "longitude": 151.11782,
+                "distance": 2.45
             },
             "isAdBlueAvailable": false
         },
         {
-            "stationid": "1-3H9VVR4",
-            "brandid": "1-GFYV-5",
-            "brand": "Independent",
-            "code": 18171,
-            "name": "North Ryde Petroleum",
-            "address": "118 Coxs Rd, North Ryde NSW 2113",
+            "stationid": "1-GPPT-588",
+            "brandid": "1-GFYV-2",
+            "brand": "Budget",
+            "code": 1517,
+            "name": "Budget Kogarah",
+            "address": "132 Princes Hway, Kogarah NSW 2217",
             "location": {
-                "latitude": -33.80141,
-                "longitude": 151.13036,
-                "distance": 4.76
+                "latitude": -33.974841,
+                "longitude": 151.12831,
+                "distance": 2.63
             },
             "isAdBlueAvailable": false
         },
         {
-            "stationid": "1-GN9E-369",
-            "brandid": "1-GFYV-0",
-            "brand": "BP",
-            "code": 301,
-            "name": "BP Naremburn",
-            "address": "169 Willoughby Road, Naremburn NSW 2065",
+            "stationid": "20246",
+            "brandid": "1-GFYV-6",
+            "brand": "Metro Fuel",
+            "code": 20246,
+            "name": "Metro Bexley North",
+            "address": "307-309 BEXLEY RD, BEXLEY NORTH NSW 2207",
             "location": {
-                "latitude": -33.820024,
-                "longitude": 151.201159,
-                "distance": 3.16
+                "latitude": -33.939867,
+                "longitude": 151.114774,
+                "distance": 2.84
             },
             "isAdBlueAvailable": false
         },
         {
-            "stationid": "1-GN9E-806",
-            "brandid": "27",
-            "brand": "Ampol Foodary",
-            "code": 787,
-            "name": "Ampol Foodary Neutral Bay",
-            "address": "16-38 Military Rd, Neutral Bay NSW 2089",
-            "location": {
-                "latitude": -33.82908,
-                "longitude": 151.2163,
-                "distance": 4.83
-            },
-            "isAdBlueAvailable": false
-        },
-        {
-            "stationid": "1-3JQTL6T",
-            "brandid": "27",
-            "brand": "Ampol Foodary",
-            "code": 18264,
-            "name": "Ampol Foodary Lane Cove West",
-            "address": "UNIT 1 237-245 BURNS BAY RD, LANE COVE WEST NSW 2066",
-            "location": {
-                "latitude": -33.816452,
-                "longitude": 151.151394,
-                "distance": 3.54
-            },
-            "isAdBlueAvailable": false
-        },
-        {
-            "stationid": "1-3R6I0SJ",
-            "brandid": "1-GFYV-5",
-            "brand": "Independent",
-            "code": 18609,
-            "name": "Jack & Co Lane Cove",
-            "address": "203 BURNS BAY RD, LANE COVE NSW 2066",
-            "location": {
-                "latitude": -33.814598,
-                "longitude": 151.154353,
-                "distance": 3.2
-            },
-            "isAdBlueAvailable": false
-        },
-        {
-            "stationid": "1-GN9E-348",
+            "stationid": "1-GN9E-230",
             "brandid": "1-GFYV-1",
             "brand": "7-Eleven",
-            "code": 278,
-            "name": "7-Eleven Roseville",
-            "address": "Corner Pacific Highway and Boundary Street, Roseville NSW 2069",
+            "code": 148,
+            "name": "7-Eleven Penshurst",
+            "address": "612 Forest Road, Penshurst NSW 2222",
             "location": {
-                "latitude": -33.78742,
-                "longitude": 151.17982,
-                "distance": 1.04
+                "latitude": -33.961504,
+                "longitude": 151.079228,
+                "distance": 2.23
             },
             "isAdBlueAvailable": false
         },
         {
-            "stationid": "20594",
+            "stationid": "1-2MY3EWI",
+            "brandid": "27",
+            "brand": "Ampol Foodary",
+            "code": 2383,
+            "name": "Ampol Foodary Kingsgrove",
+            "address": "351-357 Stoney Creek, KINGSGROVE NSW 2208",
+            "location": {
+                "latitude": -33.951446,
+                "longitude": 151.092424,
+                "distance": 1.68
+            },
+            "isAdBlueAvailable": false
+        },
+        {
+            "stationid": "20632",
+            "brandid": "1-GFYV-2",
+            "brand": "Budget",
+            "code": 20632,
+            "name": "Budget Bexley South",
+            "address": "474 FOREST RD, BEXLEY NSW 2207",
+            "location": {
+                "latitude": -33.951599,
+                "longitude": 151.125234,
+                "distance": 2.43
+            },
+            "isAdBlueAvailable": false
+        },
+        {
+            "stationid": "1-GPPT-639",
+            "brandid": "1-GFYV-5",
+            "brand": "Independent",
+            "code": 1574,
+            "name": "7 Express Carlton",
+            "address": "370 Railway Parade, Carlton NSW 2216",
+            "location": {
+                "latitude": -33.969142,
+                "longitude": 151.122205,
+                "distance": 1.86
+            },
+            "isAdBlueAvailable": false
+        },
+        {
+            "stationid": "1-GN9E-264",
+            "brandid": "1-GFYV-1",
+            "brand": "7-Eleven",
+            "code": 185,
+            "name": "7-Eleven South Hurstville",
+            "address": "822 King Georges Road & Joffre St, South Hurstville NSW 2220",
+            "location": {
+                "latitude": -33.975997,
+                "longitude": 151.10364,
+                "distance": 1.38
+            },
+            "isAdBlueAvailable": false
+        },
+        {
+            "stationid": "1-38BJOZF",
+            "brandid": "1-GFYV-2",
+            "brand": "Budget",
+            "code": 17593,
+            "name": "Budget Carlton",
+            "address": "3 Railway Pde, KOGARAH NSW 2217",
+            "location": {
+                "latitude": -33.961714,
+                "longitude": 151.133181,
+                "distance": 2.77
+            },
+            "isAdBlueAvailable": false
+        },
+        {
+            "stationid": "1-GPPT-448",
+            "brandid": "1-GFYV-2",
+            "brand": "Budget",
+            "code": 1362,
+            "name": "Budget Kingsgrove",
+            "address": "2 Commercial Rd, Kingsgrove NSW 2208",
+            "location": {
+                "latitude": -33.939641,
+                "longitude": 151.100524,
+                "distance": 2.67
+            },
+            "isAdBlueAvailable": true
+        },
+        {
+            "stationid": "1-GUP0-14",
+            "brandid": "1-GFYV-0",
+            "brand": "BP",
+            "code": 1981,
+            "name": "BP Bexley",
+            "address": "610 Forest Road, Bexley NSW 2207",
+            "location": {
+                "latitude": -33.957412,
+                "longitude": 151.118092,
+                "distance": 1.53
+            },
+            "isAdBlueAvailable": false
+        },
+        {
+            "stationid": "1-GN9E-275",
+            "brandid": "1-GFYV-1",
+            "brand": "7-Eleven",
+            "code": 197,
+            "name": "7-Eleven Bexley",
+            "address": "611-615  Mimosa Street (Corner Forest Road), Bexley NSW 2207",
+            "location": {
+                "latitude": -33.955531,
+                "longitude": 151.118478,
+                "distance": 1.67
+            },
+            "isAdBlueAvailable": false
+        },
+        {
+            "stationid": "20652",
             "brandid": "1-257XHLW",
             "brand": "Shell",
-            "code": 20594,
-            "name": "OTR Willoughby",
-            "address": "616-626 WILLOUGHBY RD, WILLOUGHBY NSW 2068",
+            "code": 20652,
+            "name": "OTR Hurstville",
+            "address": "396 FOREST RD, HURSTVILLE NSW 2220",
             "location": {
-                "latitude": -33.805911,
-                "longitude": 151.198819,
-                "distance": 1.9
+                "latitude": -33.964838,
+                "longitude": 151.099502,
+                "distance": 0.37
             },
             "isAdBlueAvailable": false
         },
         {
-            "stationid": "1-GN9E-322",
-            "brandid": "1-GFYV-1",
-            "brand": "7-Eleven",
-            "code": 250,
-            "name": "7-Eleven Lindfield",
-            "address": "238 Pacific Highway, Lindfield NSW 2070",
-            "location": {
-                "latitude": -33.778889,
-                "longitude": 151.168902,
-                "distance": 2.29
-            },
-            "isAdBlueAvailable": false
-        },
-        {
-            "stationid": "1-GN9E-313",
-            "brandid": "1-GFYV-1",
-            "brand": "7-Eleven",
-            "code": 240,
-            "name": "7-Eleven Killara",
-            "address": "494 Pacific Hwy, Killara NSW 2071",
-            "location": {
-                "latitude": -33.771365,
-                "longitude": 151.16108,
-                "distance": 3.39
-            },
-            "isAdBlueAvailable": false
-        },
-        {
-            "stationid": "1-GPPT-829",
-            "brandid": "1-GFYV-0",
-            "brand": "BP",
-            "code": 1785,
-            "name": "BP Willoughby",
-            "address": "500 Willoughby Rd, Willoughby NSW 2068",
-            "location": {
-                "latitude": -33.810257,
-                "longitude": 151.19934,
-                "distance": 2.24
-            },
-            "isAdBlueAvailable": false
-        },
-        {
-            "stationid": "1-GN9E-849",
-            "brandid": "27",
-            "brand": "Ampol Foodary",
-            "code": 834,
-            "name": "Ampol Foodary North Ryde",
-            "address": "41-43 Epping Rd Cnr Wicks Rd, North Ryde NSW 2113",
-            "location": {
-                "latitude": -33.79145,
-                "longitude": 151.131185,
-                "distance": 4.69
-            },
-            "isAdBlueAvailable": false
-        },
-        {
-            "stationid": "1-GN9E-128",
+            "stationid": "1-GN9E-15",
             "brandid": "GSD-206498",
             "brand": "Reddy Express",
-            "code": 34,
-            "name": "Shell Reddy Express Chatswood",
-            "address": "877-879 Pacific Hwy, Chatswood NSW 2067",
+            "code": 58,
+            "name": "Shell Reddy  Express South Hurstville",
+            "address": "835 King Georges Road, South Hurstville NSW 2221",
             "location": {
-                "latitude": -33.791717,
-                "longitude": 151.180472,
-                "distance": 0.56
+                "latitude": -33.978745,
+                "longitude": 151.105526,
+                "distance": 1.69
             },
             "isAdBlueAvailable": false
         },
         {
-            "stationid": "1-3NWYL9A",
-            "brandid": "1-257XHLW",
-            "brand": "Shell",
-            "code": 18514,
-            "name": "Shell Lane Cove",
-            "address": "254 BURNS BAY RD, LANE COVE NSW 2066",
-            "location": {
-                "latitude": -33.817191,
-                "longitude": 151.151876,
-                "distance": 3.55
-            },
-            "isAdBlueAvailable": false
-        },
-        {
-            "stationid": "1-3JG311W",
-            "brandid": "27",
-            "brand": "Ampol Foodary",
-            "code": 18249,
-            "name": "Ampol Foodary Crows Nest",
-            "address": "111-121 Falcon Street, CROWS NEST NSW 2065",
-            "location": {
-                "latitude": -33.82868,
-                "longitude": 151.20603,
-                "distance": 4.21
-            },
-            "isAdBlueAvailable": false
-        },
-        {
-            "stationid": "1-GN9E-946",
-            "brandid": "27",
-            "brand": "Ampol Foodary",
-            "code": 942,
-            "name": "Ampol Foodary Chatswood",
-            "address": "572 Pacific Hwy, Chatswood NSW 2067",
-            "location": {
-                "latitude": -33.803715,
-                "longitude": 151.179001,
-                "distance": 0.81
-            },
-            "isAdBlueAvailable": false
-        },
-        {
-            "stationid": "1-GN9E-164",
-            "brandid": "1-GFYV-1",
-            "brand": "7-Eleven",
-            "code": 74,
-            "name": "7-Eleven Artarmon",
-            "address": "477 Pacific Highway, Artarmon NSW 2064",
-            "location": {
-                "latitude": -33.810521,
-                "longitude": 151.177429,
-                "distance": 1.57
-            },
-            "isAdBlueAvailable": false
-        },
-        {
-            "stationid": "1-GPPT-838",
+            "stationid": "1-3KBI3NY",
             "brandid": "1-GFYV-0",
             "brand": "BP",
-            "code": 1795,
-            "name": "BP Lane Cove",
-            "address": "62-70 Epping Rd, Lane Cove NSW 2066",
+            "code": 18296,
+            "name": "BP South Hurstville",
+            "address": "63 CONNELLS POINT RD, SOUTH HURSTVILLE NSW 2221",
             "location": {
-                "latitude": -33.811106,
-                "longitude": 151.164217,
-                "distance": 2.25
+                "latitude": -33.97798,
+                "longitude": 151.103984,
+                "distance": 1.6
+            },
+            "isAdBlueAvailable": false
+        },
+        {
+            "stationid": "1-GPPT-685",
+            "brandid": "1-GFYV-0",
+            "brand": "BP",
+            "code": 1625,
+            "name": "BP Bexley North",
+            "address": "369C Bexley Road, Bexley NSW 2207",
+            "location": {
+                "latitude": -33.945827,
+                "longitude": 151.12302,
+                "distance": 2.69
             },
             "isAdBlueAvailable": false
         }
     ],
     "prices": [
         {
-            "stationcode": 34,
-            "fueltype": "U91",
-            "price": 183.9,
+            "stationcode": 58,
+            "fueltype": "E10",
+            "price": 177.9,
             "priceunit": "litre",
             "description": null,
-            "lastupdated": "2026-05-08 20:05:40"
+            "lastupdated": "2026-05-09 01:35:36"
         },
         {
-            "stationcode": 74,
-            "fueltype": "U91",
-            "price": 219.9,
+            "stationcode": 148,
+            "fueltype": "E10",
+            "price": 171.9,
             "priceunit": "litre",
             "description": null,
-            "lastupdated": "2026-05-06 03:42:13"
+            "lastupdated": "2026-05-08 22:27:13"
         },
         {
-            "stationcode": 240,
-            "fueltype": "U91",
-            "price": 179.9,
-            "priceunit": "litre",
-            "description": null,
-            "lastupdated": "2026-05-08 23:57:11"
-        },
-        {
-            "stationcode": 250,
-            "fueltype": "U91",
-            "price": 179.9,
-            "priceunit": "litre",
-            "description": null,
-            "lastupdated": "2026-05-08 23:21:13"
-        },
-        {
-            "stationcode": 278,
-            "fueltype": "U91",
-            "price": 179.9,
-            "priceunit": "litre",
-            "description": null,
-            "lastupdated": "2026-05-09 22:42:18"
-        },
-        {
-            "stationcode": 301,
-            "fueltype": "U91",
-            "price": 178.9,
-            "priceunit": "litre",
-            "description": null,
-            "lastupdated": "2026-05-04 20:38:27"
-        },
-        {
-            "stationcode": 660,
-            "fueltype": "U91",
+            "stationcode": 185,
+            "fueltype": "E10",
             "price": 173.9,
             "priceunit": "litre",
             "description": null,
-            "lastupdated": "2026-05-04 23:42:15"
+            "lastupdated": "2026-05-09 22:30:31"
         },
         {
-            "stationcode": 787,
-            "fueltype": "U91",
-            "price": 178.9,
-            "priceunit": "litre",
-            "description": null,
-            "lastupdated": "2026-05-10 02:32:18"
-        },
-        {
-            "stationcode": 834,
-            "fueltype": "U91",
-            "price": 181.9,
-            "priceunit": "litre",
-            "description": null,
-            "lastupdated": "2026-05-09 02:42:13"
-        },
-        {
-            "stationcode": 942,
-            "fueltype": "U91",
-            "price": 185.9,
-            "priceunit": "litre",
-            "description": null,
-            "lastupdated": "2026-05-09 00:42:14"
-        },
-        {
-            "stationcode": 1089,
-            "fueltype": "U91",
-            "price": 175.8,
-            "priceunit": "litre",
-            "description": null,
-            "lastupdated": "2026-05-08 13:42:36"
-        },
-        {
-            "stationcode": 1243,
-            "fueltype": "U91",
-            "price": 173.9,
-            "priceunit": "litre",
-            "description": null,
-            "lastupdated": "2026-05-08 05:45:21"
-        },
-        {
-            "stationcode": 1785,
-            "fueltype": "U91",
-            "price": 181.9,
-            "priceunit": "litre",
-            "description": null,
-            "lastupdated": "2026-04-30 07:25:29"
-        },
-        {
-            "stationcode": 1795,
-            "fueltype": "U91",
-            "price": 219.9,
-            "priceunit": "litre",
-            "description": null,
-            "lastupdated": "2026-05-07 20:04:01"
-        },
-        {
-            "stationcode": 2714,
-            "fueltype": "U91",
-            "price": 176.9,
-            "priceunit": "litre",
-            "description": null,
-            "lastupdated": "2026-04-24 03:38:20"
-        },
-        {
-            "stationcode": 18171,
-            "fueltype": "U91",
-            "price": 178.4,
-            "priceunit": "litre",
-            "description": null,
-            "lastupdated": "2026-04-24 01:56:07"
-        },
-        {
-            "stationcode": 18249,
-            "fueltype": "U91",
-            "price": 183.9,
-            "priceunit": "litre",
-            "description": null,
-            "lastupdated": "2026-05-09 00:42:14"
-        },
-        {
-            "stationcode": 18264,
-            "fueltype": "U91",
-            "price": 179.5,
-            "priceunit": "litre",
-            "description": null,
-            "lastupdated": "2026-05-06 06:32:15"
-        },
-        {
-            "stationcode": 18422,
-            "fueltype": "U91",
+            "stationcode": 197,
+            "fueltype": "E10",
             "price": 174.9,
             "priceunit": "litre",
             "description": null,
-            "lastupdated": "2026-05-09 01:59:39"
+            "lastupdated": "2026-05-08 22:45:16"
         },
         {
-            "stationcode": 18514,
-            "fueltype": "U91",
-            "price": 183.9,
+            "stationcode": 1362,
+            "fueltype": "E10",
+            "price": 173.9,
             "priceunit": "litre",
             "description": null,
-            "lastupdated": "2026-05-08 21:00:37"
+            "lastupdated": "2026-05-05 04:20:11"
         },
         {
-            "stationcode": 18609,
-            "fueltype": "U91",
-            "price": 179.5,
+            "stationcode": 1517,
+            "fueltype": "E10",
+            "price": 171.7,
             "priceunit": "litre",
             "description": null,
-            "lastupdated": "2026-05-05 09:20:45"
+            "lastupdated": "2026-05-05 21:59:20"
         },
         {
-            "stationcode": 18703,
-            "fueltype": "U91",
-            "price": 169.3,
+            "stationcode": 1574,
+            "fueltype": "E10",
+            "price": 173.9,
             "priceunit": "litre",
             "description": null,
-            "lastupdated": "2026-05-09 21:16:33"
+            "lastupdated": "2026-05-06 23:27:08"
         },
         {
-            "stationcode": 20594,
-            "fueltype": "U91",
+            "stationcode": 1625,
+            "fueltype": "E10",
             "price": 179.9,
             "priceunit": "litre",
             "description": null,
-            "lastupdated": "2026-05-09 02:24:13"
+            "lastupdated": "2026-05-08 05:40:14"
+        },
+        {
+            "stationcode": 1981,
+            "fueltype": "E10",
+            "price": 174.9,
+            "priceunit": "litre",
+            "description": null,
+            "lastupdated": "2026-05-01 03:24:04"
+        },
+        {
+            "stationcode": 2383,
+            "fueltype": "E10",
+            "price": 172.9,
+            "priceunit": "litre",
+            "description": null,
+            "lastupdated": "2026-05-09 01:12:14"
+        },
+        {
+            "stationcode": 17593,
+            "fueltype": "E10",
+            "price": 173.9,
+            "priceunit": "litre",
+            "description": null,
+            "lastupdated": "2026-05-04 20:36:18"
+        },
+        {
+            "stationcode": 18216,
+            "fueltype": "E10",
+            "price": 169.9,
+            "priceunit": "litre",
+            "description": null,
+            "lastupdated": "2026-05-08 23:51:34"
+        },
+        {
+            "stationcode": 18296,
+            "fueltype": "E10",
+            "price": 177.9,
+            "priceunit": "litre",
+            "description": null,
+            "lastupdated": "2026-05-08 00:30:02"
+        },
+        {
+            "stationcode": 18653,
+            "fueltype": "E10",
+            "price": 171.7,
+            "priceunit": "litre",
+            "description": null,
+            "lastupdated": "2026-05-05 05:08:55"
+        },
+        {
+            "stationcode": 18696,
+            "fueltype": "E10",
+            "price": 171.7,
+            "priceunit": "litre",
+            "description": null,
+            "lastupdated": "2026-05-05 04:43:32"
+        },
+        {
+            "stationcode": 20246,
+            "fueltype": "E10",
+            "price": 171.9,
+            "priceunit": "litre",
+            "description": null,
+            "lastupdated": "2026-05-09 02:54:00"
+        },
+        {
+            "stationcode": 20632,
+            "fueltype": "E10",
+            "price": 173.5,
+            "priceunit": "litre",
+            "description": null,
+            "lastupdated": "2026-05-06 01:17:20"
+        },
+        {
+            "stationcode": 20652,
+            "fueltype": "E10",
+            "price": 177.9,
+            "priceunit": "litre",
+            "description": null,
+            "lastupdated": "2026-05-09 02:15:21"
         }
     ]
 }

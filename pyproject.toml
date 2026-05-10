@@ -1,0 +1,12 @@
+[project]
+name = "fuel-price-tracker"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.136.1",
+    "geopy>=2.4.1",
+    "python-dotenv>=1.2.2",
+    "requests>=2.33.1",
+    "uvicorn[standard]>=0.46.0",
+]
