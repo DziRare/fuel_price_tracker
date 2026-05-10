@@ -6,7 +6,7 @@ import uuid
 # from dotenv import load_dotenv
 import datetime
 from geopy.geocoders import Nominatim
-from backend.fuel_api import retrieve_nearby_fuel_prices
+from fuel_api import retrieve_nearby_fuel_prices
 
 agent = Nominatim(user_agent="Geopy Library")
 
@@ -32,6 +32,8 @@ def display_info(fuel_type, distance):
 
         return fuel_stations
 
+
+# if __name__ == "__main__":
 #Entering details to retrieve fuel data
 location = agent.geocode(input("Enter location: "))
 distance = ""

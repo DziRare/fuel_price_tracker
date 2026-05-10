@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
-from backend.main import display
+from main import display
 
 app = FastAPI()
 
