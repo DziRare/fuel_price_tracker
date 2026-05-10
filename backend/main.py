@@ -6,7 +6,7 @@ import uuid
 # from dotenv import load_dotenv
 import datetime
 from geopy.geocoders import Nominatim
-from fuel_api import retrieve_nearby_fuel_prices
+from backend.fuel_api import retrieve_nearby_fuel_prices
 
 agent = Nominatim(user_agent="Geopy Library")
 

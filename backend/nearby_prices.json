@@ -1,0 +1,28 @@
+{
+    "stations": [
+        {
+            "stationid": "1-GN9E-369",
+            "brandid": "1-GFYV-0",
+            "brand": "BP",
+            "code": 301,
+            "name": "BP Naremburn",
+            "address": "169 Willoughby Road, Naremburn NSW 2065",
+            "location": {
+                "latitude": -33.820024,
+                "longitude": 151.201159,
+                "distance": 0.7
+            },
+            "isAdBlueAvailable": false
+        }
+    ],
+    "prices": [
+        {
+            "stationcode": 301,
+            "fueltype": "U91",
+            "price": 178.9,
+            "priceunit": "litre",
+            "description": null,
+            "lastupdated": "2026-05-04 20:38:27"
+        }
+    ]
+}

@@ -32,6 +32,7 @@ def retrieve_access_token(authorization):
 
 access_token = retrieve_access_token(encoded_credentials)
 
+#Retrieving all stations and fuel prices within a certian radius
 def retrieve_nearby_fuel_prices(latitude, longitude, fueltype="U91", radius=5):
     url = "https://api.onegov.nsw.gov.au/FuelPriceCheck/v1/fuel/prices/nearby"
 
