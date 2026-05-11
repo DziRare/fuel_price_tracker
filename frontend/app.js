@@ -1,43 +1,20 @@
-// function showMap(id, lat, long, label) {
-//     const mapLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-//       maxZoom: 19,
-//       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-//     });
-//     const satLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-//       maxZoom: 19,
-//       attribution: '&copy; <a href="https://esri.com">ESRI</a>'
-//     });
-//     const map = L.map(id, {
-//       layers: [mapLayer],
-//       center: [lat, long],
-//       zoom: 14,
-//       scrollWheelZoom: false,
-//     });
-//     const markerLayer = L.marker([lat, long]).addTo(map).bindPopup(label);
-//     L.control.layers({Map: mapLayer, Satellite: satLayer}, {Markers: markerLayer}).addTo(map);
-//   }
-//   document.addEventListener("DOMContentLoaded", (event) => {
-//     showMap('myMap', -33.865143, 151.209900, 'Sydney, Australia');
-//   });
+const key = '';
+    const map = L.map('myMap').setView([-33.865143, 151.209900], 14); //starting position
+    L.tileLayer(`https://api.maptiler.com/maps/streets-v4/{z}/{x}/{y}.png?key=${key}`,{ //style URL
+    tileSize: 512,
+    zoomOffset: -1,
+    minZoom: 1,
+    attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
+    crossOrigin: true
+    }).addTo(map);
 
-
-const key = 'API KEY';
-const source = new ol.source.TileJSON({
-  url: `https://api.maptiler.com/maps/streets-v4/tiles.json?key=${key}`,
-  tileSize: 512,
-  crossOrigin: 'anonymous'
+const fuelIcon = L.divIcon({
+    html: '⛽',
+    className: 'fuel-marker',
+    iconSize: [30, 30],
+    iconAnchor: [15, 10]
 });
 
-const map = new ol.Map({
-  layers: [
-    new ol.layer.Tile({
-      source: source
-    })
-  ],
-  target: 'myMap',
-  view: new ol.View({
-    constrainResolution: true,
-    center: ol.proj.fromLonLat([151.209900, -33.865143]),
-    zoom: 14
-  })
-});
+L.marker([-33.865143, 151.209900], {icon: fuelIcon})
+    .addTo(map)
+    .bindPopup("Sydney");
