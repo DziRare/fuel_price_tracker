@@ -41,17 +41,126 @@ h1 {
 }
 
 form {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
     position: absolute;
     z-index: 1;
     width: 50%;
-    background-color: whitesmoke;
-    height: 50px;
-    border: 2px grey solid;
+    height: 80px;
+    /* border: 2px grey solid; */
     left: 50%;
     bottom: 5%;
     transform: translate(-50%, 0%);
+    padding: 0;
+}
+
+.search-wrapper {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+}
+
+.fuel-types-mask {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.fuel-types {
+    display: flex;
+    /* align-items: center; */
+    column-gap: 1%;
+    overflow-x: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex: 1;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    height: 40px;
+    width: 100%;
+
+    mask-image: linear-gradient(
+        to right,
+        transparent 0,
+        black 40px,
+        black calc(100% - 40px),
+        transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0,
+        black 40px,
+        black calc(100% - 40px),
+        transparent 100%
+    );
+}
+
+/* Fade on right only */
+.fuel-types-mask.show-right-fade .fuel-types {
+    mask-image: linear-gradient(to right, black, black calc(100% - 40px), transparent);
+    -webkit-mask-image: linear-gradient(to right, black, black calc(100% - 40px), transparent);
+}
+
+/* Fade on left only */
+.fuel-types-mask.show-left-fade .fuel-types {
+    mask-image: linear-gradient(to right, transparent, black 40px, black);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 40px, black);
+}
+
+/* Fade on both sides */
+.fuel-types-mask.show-left-fade.show-right-fade .fuel-types {
+    mask-image: linear-gradient(to right, transparent, black 40px, black calc(100% - 40px), transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 40px, black calc(100% - 40px), transparent);
+}
+
+.fuel-types::-webkit-scrollbar {
+    display: none;
+}
+
+.fuel-container {
+    flex-shrink: 0;
+    padding: 0 12px;
+    display: flex;
+    height: 30px;
+    align-items: center;
+    background-color: purple;
+    color: goldenrod;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px black;
+}
+
+.scroll-btn {
+    flex-shrink: 0;
+    width: 25px;
+    height: 60%;
+    padding-bottom: 3px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 0;
+    background-color: purple;
+    color: goldenrod;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5em;
+    line-height: 0;
+    cursor: pointer;
+}
+
+.scroll-btn:hover {
+    background-color: darkmagenta;
+}
+
+.searchbar {
+    display: grid;
+    height: 40px;
+    grid-template-columns: 3fr 1fr;
+    border: 1px grey solid;
+    border-radius: 25px;
 }
 
 #location {
@@ -63,18 +172,22 @@ form {
     padding-bottom: 0;
     border: 0;
     font-size: 1.5em;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
 }
 
-#btn {
+#search-btn {
     margin: 0;
     height: 100%;
     background-color: purple;
     border: 0;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
     font-size: 1.5em;
     transition: background-color 0.2s ease-in-out;
 }
 
-#btn:hover {
+#search-btn:hover {
     background-color: darkorchid;
     cursor: pointer;
 }
