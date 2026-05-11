@@ -16,6 +16,8 @@ def get_stations():
 
         station_dict["name"] = station["name"]
         station_dict["address"] = station["address"]
+        station_dict["latitude"] = station["location"]["latitude"]
+        station_dict["longitude"] = station["location"]["longitude"]
         station_dict["distance"] = station["location"]["distance"]
         station_dict["fuel_type"] = station["fueltype"]
         station_dict["price"] = station["price"]
