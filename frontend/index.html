@@ -26,7 +26,7 @@
                         <div class="fuel-types-mask">
                             <div class="fuel-types">
                                 <div class="fuel-container">
-                                    <input type="radio" id="U91" name="fuel-type" value="U91" />
+                                    <input type="radio" id="U91" name="fuel-type" value="U91" checked/>
                                     <label for="U91">Unleaded 91</label>
                                 </div>
                                 <div class="fuel-container">
@@ -63,6 +63,7 @@
                     </div>
                     <div class="searchbar">
                         <input type="text" id="location" name="location" required minlength="3" placeholder="Enter location within NSW"/>
+                        <input type="number" id="distance" name="distance" min="1" max="100" placeholder="Enter radius (km)" required/>
                         <input type="submit" id="search-btn" value="Find Location"/>
                     </div>
                 </form>
