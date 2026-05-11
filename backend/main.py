@@ -33,21 +33,21 @@ def display_info(fuel_type, distance):
         return fuel_stations
 
 
-# if __name__ == "__main__":
+if __name__ == "__main__":
 #Entering details to retrieve fuel data
-location = agent.geocode(input("Enter location: "))
-distance = ""
-if location:
-    fuel = input("Enter fuel type you're looking for (DL, E10, P95, P98, U91, PDL, EV, LPG): ")
-    if fuel in ["DL", "E10", "P95", "P98", "U91", "PDL", "EV", "LPG"]:
-        while distance == "":
-            try:
-                distance = int(input("Enter the distance (km) you would like the station to be in: "))
-            except ValueError:
-                print("Distance must be integer value.")
-        retrieve_nearby_fuel_prices(location.latitude, location.longitude, fuel, distance)
-        display = display_info(fuel, distance)
+    location = agent.geocode(input("Enter location: "))
+    distance = ""
+    if location:
+        fuel = input("Enter fuel type you're looking for (DL, E10, P95, P98, U91, PDL, EV, LPG): ")
+        if fuel in ["DL", "E10", "P95", "P98", "U91", "PDL", "EV", "LPG"]:
+            while distance == "":
+                try:
+                    distance = int(input("Enter the distance (km) you would like the station to be in: "))
+                except ValueError:
+                    print("Distance must be integer value.")
+            retrieve_nearby_fuel_prices(location.latitude, location.longitude, fuel, distance)
+            display = display_info(fuel, distance)
+        else:
+            print("Invalid fuel type.")
     else:
-        print("Invalid fuel type.")
-else:
-    print("Location not found.")
+        print("Location not found.")

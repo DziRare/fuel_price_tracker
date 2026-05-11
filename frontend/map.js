@@ -1,4 +1,4 @@
-const key = '';
+const key = 'wFUHjha2PcUCyVcHGVUF';
     const map = L.map('myMap').setView([-33.865143, 151.209900], 14); //starting position
     L.tileLayer(`https://api.maptiler.com/maps/streets-v4/{z}/{x}/{y}.png?key=${key}`,{ //style URL
     tileSize: 512,
