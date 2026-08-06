@@ -20,6 +20,11 @@ app.add_middleware(
 def read_root():
     return {"Hello": "World"}
 
+@app.get("/location")
+def get_coordinates(location: str):
+    coordinates = agent.geocode(location)
+    return {"latitude": coordinates.latitude, "longitude": coordinates.longitude}
+
 @app.get("/stations")
 def get_stations(location: str, fuel_type: str, distance: int):
     coordinates = agent.geocode(location)

@@ -1,5 +1,6 @@
 // Specify the API endpoint for user data
 const apiUrl = 'http://127.0.0.1:8000/stations';
+const location_api_url = 'http://127.0.0.1:8000/location'
 const myForm = document.getElementById('location-form');
 
 // Intial map API setup
@@ -22,6 +23,13 @@ const fuelIcon = L.divIcon({
     iconAnchor: [15, 10]
 });
 
+const centreIcon = L.divIcon({
+    html: '🟣',
+    className: 'search-centre',
+    iconSize: [30, 30],
+    iconAnchor: [12, 10]
+})
+
 const markerGroup = L.layerGroup().addTo(map);
 
 myForm.addEventListener('submit', async (e) => {
@@ -31,11 +39,17 @@ myForm.addEventListener('submit', async (e) => {
     const params = new URLSearchParams(formData);   
 
     try {
+        const location_response = await fetch(`${location_api_url}?${params}`);
         const response = await fetch(`${apiUrl}?${params}`);
         
+        const location_result = await location_response.json();
         const result = await response.json();
         console.log('Success:', result);
         markerGroup.clearLayers();
+
+        L.marker([location_result["latitude"], location_result["longitude"]], {icon: centreIcon})
+        .addTo(markerGroup)
+        .bindPopup(params.get('location'));
 
         for (let step = 0; step < result.length; step++) {
             console.log(`Name: ${result[step]["name"]}`);
@@ -46,7 +60,7 @@ myForm.addEventListener('submit', async (e) => {
             
             L.marker([result[step]["latitude"], result[step]["longitude"]], {icon: fuelIcon})
             .addTo(markerGroup)
-            .bindPopup(`${result[step]["name"]}: $${result[step]["price"]}, ${result[step]["distance"]}km`);
+            .bindPopup(`${result[step]["fuel_type"]} ${result[step]["name"]}: $${result[step]["price"]}, ${result[step]["distance"]}km`);
         }
 
     } catch (error) {
