@@ -28,15 +28,19 @@ def retrieve_victorian_fuel_prices():
     #     file.write(json.dumps(data, indent=4))
 
 def calculate_distance(latitude, longitude, fuel_prices, radius):
-   epicentre = (latitude, longitude)
-   for station_info in fuel_prices:
-       station_location = (station_info['fuelStation']['location']['latitude'], station_info['fuelStation']['location']['longitude'])
-       distance = geodesic(epicentre, station_location)
-       if distance <= radius:
-           print(station_info['fuelStation']['name'])
-           for details in station_info['fuelPrices']:
-               print(f"{details['fuelType']}: {details['price']}")
-           print("-----------------------------------")
+    epicentre = (latitude, longitude)
+    stations = []
+    for station_info in fuel_prices:
+        station_location = (station_info['fuelStation']['location']['latitude'], station_info['fuelStation']['location']['longitude'])
+        distance = geodesic(epicentre, station_location)
+        if distance <= radius:
+            print(station_info['fuelStation']['name'])
+            for details in station_info['fuelPrices']:
+                print(f"{details['fuelType']}: {details['price']}")
+            stations.append(station_info)
+            print("-----------------------------------")
+
+    return stations
 
 fuel_prices = retrieve_victorian_fuel_prices()
 location = agent.geocode(input("Enter location: "))

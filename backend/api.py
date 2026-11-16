@@ -3,7 +3,9 @@ from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 from main import display_info
 from fuel_api import retrieve_nearby_fuel_prices
+from fuel_api_victoria import retrieve_victorian_fuel_prices, calculate_distance
 from geopy.geocoders import Nominatim
+from geopy.distance import geodesic
 
 agent = Nominatim(user_agent="Geopy Library")
 
@@ -44,4 +46,27 @@ def get_stations(location: str, fuel_type: str, distance: int):
         station_dict["fuel_type"] = station["fueltype"]
         station_dict["price"] = station["price"]
         details.append(station_dict)
+    return details
+
+@app.get("/stations_victoria")
+def get_stations_victoria(location: str, fuel_type: str, distance: int):
+    coordinates = agent.geocode(location)
+
+    fuel_prices = retrieve_victorian_fuel_prices()
+    stations = calculate_distance(coordinates.latitude, coordinates.longitude, fuel_prices, distance)
+    details = []
+    for station in stations:
+        for price_details in station['fuelPrices']:
+            station_dict = {}
+
+            distance = geodesic(coordinates, (station['fuelStation']['location']['latitude'], station['fuelStation']['location']['longitude']))
+
+            station_dict["name"] = station['fuelStation']['name']
+            station_dict["address"] = station['fuelStation']['address']
+            station_dict["latitude"] = station['fuelStation']['location']['latitude']
+            station_dict["longitude"] = station['fuelStation']['location']['longitude']
+            station_dict["distance"] = distance
+            station_dict["fuel_type"] = station['fuelPrices']['fuelType']
+            station_dict["price"] = station['fuelPrices']['price']
+            details.append(station_dict)
     return details
