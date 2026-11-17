@@ -1,10 +1,11 @@
 // Specify the API endpoint for user data
 const apiUrl = 'http://127.0.0.1:8000/stations';
-const location_api_url = 'http://127.0.0.1:8000/location'
+const location_api_url = 'http://127.0.0.1:8000/location';
+const vicApiUrl = 'http://127.0.0.1:8000/stations_victoria';
 const myForm = document.getElementById('location-form');
 
 // Intial map API setup
-const key = 'my_map_key';
+const key = 'wFUHjha2PcUCyVcHGVUF';
 const map = L.map('myMap').setView([-33.865143, 151.209900], 14); //starting position
 
 
@@ -68,3 +69,36 @@ myForm.addEventListener('submit', async (e) => {
     }
 
 });
+
+myForm.addEventListener('click', displayVictorianStations);
+
+async function displayVictorianStations () {
+    // e.preventDefault(); // Prevent page reload
+
+    const formData = new FormData(myForm);
+    const params = new URLSearchParams(formData);
+
+    try {
+        const location_response = await fetch(`${location_api_url}?${params}`);
+        const response = await fetch(`${vicApiUrl}?${params}`);
+
+        const location_result = await location_response.json();
+        const result = await response.json();
+        console.log('Success:', result);
+        markerGroup.clearLayers();
+
+        for (let step = 0; step < result.length; step++) {
+            console.log(`Name: ${result[step]["name"]}`);
+            console.log(`Address: ${result[step]["address"]}`);
+            console.log(`Price: ${result[step]["price"]}c`);
+            console.log(`Fuel: ${result[step]["fuel_type"]}`);
+            console.log(`Distance: ${result[step]["distance"]}km`);
+            
+            L.marker([result[step]["latitude"], result[step]["longitude"]], {icon: fuelIcon})
+            .addTo(markerGroup)
+            .bindPopup(`${result[step]["fuel_type"]} ${result[step]["name"]}: $${result[step]["price"]}, ${result[step]["distance"]}km`);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}

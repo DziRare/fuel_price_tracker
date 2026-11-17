@@ -42,7 +42,8 @@ def calculate_distance(latitude, longitude, fuel_prices, radius):
 
     return stations
 
-fuel_prices = retrieve_victorian_fuel_prices()
-location = agent.geocode(input("Enter location: "))
-radius = float(input("Enter desired radius: "))
-calculate_distance(location.latitude, location.longitude, fuel_prices, radius)
+if __name__ == "__main__":
+    fuel_prices = retrieve_victorian_fuel_prices()
+    location = agent.geocode(input("Enter location: "))
+    radius = float(input("Enter desired radius: "))
+    calculate_distance(location.latitude, location.longitude, fuel_prices, radius)
