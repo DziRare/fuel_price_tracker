@@ -70,10 +70,10 @@ myForm.addEventListener('submit', async (e) => {
 
 });
 
-myForm.addEventListener('click', displayVictorianStations);
+myForm.addEventListener('submit', displayVictorianStations);
 
-async function displayVictorianStations () {
-    // e.preventDefault(); // Prevent page reload
+async function displayVictorianStations (e) {
+    e.preventDefault(); // Prevent page reload
 
     const formData = new FormData(myForm);
     const params = new URLSearchParams(formData);

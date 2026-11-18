@@ -48,25 +48,34 @@ def get_stations(location: str, fuel_type: str, distance: int):
         details.append(station_dict)
     return details
 
+# NSW and Victoria use different codes for diesel
+VIC_FUEL_CODES = {"DL": "DSL", "PDL": "PDSL"}
 @app.get("/stations_victoria")
 def get_stations_victoria(location: str, fuel_type: str, distance: int):
     coordinates = agent.geocode(location)
+    vic_fuel_type = VIC_FUEL_CODES.get(fuel_type, fuel_type)
 
     fuel_prices = retrieve_victorian_fuel_prices()
     stations = calculate_distance(coordinates.latitude, coordinates.longitude, fuel_prices, distance)
     details = []
     for station in stations:
+        info = station["fuelStation"]
+        lat = info["location"]["latitude"]
+        lon = info["location"]["longitude"]
+        km = round(geodesic((coordinates.latitude, coordinates.longitude), (lat, lon)).km, 2)
         for price_details in station['fuelPrices']:
+            if price_details["fuelType"] != vic_fuel_type:
+                continue
+            if not price_details.get("isAvailable", True) or price_details.get("price") is None:
+                continue
+
             station_dict = {}
-
-            distance = geodesic(coordinates, (station['fuelStation']['location']['latitude'], station['fuelStation']['location']['longitude']))
-
             station_dict["name"] = station['fuelStation']['name']
             station_dict["address"] = station['fuelStation']['address']
-            station_dict["latitude"] = station['fuelStation']['location']['latitude']
-            station_dict["longitude"] = station['fuelStation']['location']['longitude']
-            station_dict["distance"] = distance
-            station_dict["fuel_type"] = station['fuelPrices']['fuelType']
-            station_dict["price"] = station['fuelPrices']['price']
+            station_dict["latitude"] = lat
+            station_dict["longitude"] = lon
+            station_dict["distance"] = km
+            station_dict["fuel_type"] = fuel_type
+            station_dict["price"] = price_details['price']
             details.append(station_dict)
     return details

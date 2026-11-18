@@ -10,23 +10,9 @@
             "location": {
                 "latitude": -35.808364,
                 "longitude": 145.559605,
-                "distance": 221.55
+                "distance": 229.05
             },
             "isAdBlueAvailable": false
-        },
-        {
-            "stationid": "20929",
-            "brandid": "1-GFYV-6",
-            "brand": "Metro Fuel",
-            "code": 20929,
-            "name": "Metro Barham",
-            "address": "2-4 MOULAMEIN RD, BARHAM NSW 2732",
-            "location": {
-                "latitude": -35.623909,
-                "longitude": 144.128963,
-                "distance": 237.28
-            },
-            "isAdBlueAvailable": true
         },
         {
             "stationid": "1-GPPT-192",
@@ -38,7 +24,7 @@
             "location": {
                 "latitude": -35.810776,
                 "longitude": 145.560793,
-                "distance": 221.33
+                "distance": 228.81
             },
             "isAdBlueAvailable": false
         },
@@ -52,49 +38,21 @@
             "location": {
                 "latitude": -35.806156,
                 "longitude": 144.639746,
-                "distance": 210.43
+                "distance": 225.01
             },
             "isAdBlueAvailable": false
         },
         {
-            "stationid": "1-GPPT-184",
-            "brandid": "1-3L9CXTK",
-            "brand": "Ampol",
-            "code": 1069,
-            "name": "Ampol Mathoura",
-            "address": "29 Moama Street, Mathoura NSW 2710",
+            "stationid": "1-GN9E-721",
+            "brandid": "1-3U2AAFV",
+            "brand": "EG Ampol",
+            "code": 693,
+            "name": "EG Ampol Corowa",
+            "address": "Cnr Queen & Parliament Streets, Corowa NSW 2646",
             "location": {
-                "latitude": -35.812882,
-                "longitude": 144.902353,
-                "distance": 209.75
-            },
-            "isAdBlueAvailable": false
-        },
-        {
-            "stationid": "1-3G3N2TG",
-            "brandid": "1-GFYV-0",
-            "brand": "BP",
-            "code": 18148,
-            "name": "Barooga General Store",
-            "address": "37 Vermont Street, BAROOGA NSW 3644",
-            "location": {
-                "latitude": -35.912387,
-                "longitude": 145.69048,
-                "distance": 214.84
-            },
-            "isAdBlueAvailable": false
-        },
-        {
-            "stationid": "1-GUP0-32",
-            "brandid": "1-257XHLZ",
-            "brand": "Lowes",
-            "code": 1999,
-            "name": "Lowes Mulwala",
-            "address": "55-57 Melbourne Stre, Mulwala NSW 2647",
-            "location": {
-                "latitude": -35.986957,
-                "longitude": 146.007153,
-                "distance": 219.99
+                "latitude": -36.000344,
+                "longitude": 146.390444,
+                "distance": 238.15
             },
             "isAdBlueAvailable": false
         },
@@ -108,7 +66,49 @@
             "location": {
                 "latitude": -36.111205,
                 "longitude": 144.754666,
-                "distance": 176.29
+                "distance": 190.2
+            },
+            "isAdBlueAvailable": false
+        },
+        {
+            "stationid": "1-3G3N2TG",
+            "brandid": "1-GFYV-0",
+            "brand": "BP",
+            "code": 18148,
+            "name": "Barooga General Store",
+            "address": "37 Vermont Street, BAROOGA NSW 3644",
+            "location": {
+                "latitude": -35.912387,
+                "longitude": 145.69048,
+                "distance": 220.94
+            },
+            "isAdBlueAvailable": false
+        },
+        {
+            "stationid": "1-GPPT-184",
+            "brandid": "1-3L9CXTK",
+            "brand": "Ampol",
+            "code": 1069,
+            "name": "Ampol Mathoura",
+            "address": "29 Moama Street, Mathoura NSW 2710",
+            "location": {
+                "latitude": -35.812882,
+                "longitude": 144.902353,
+                "distance": 222.44
+            },
+            "isAdBlueAvailable": false
+        },
+        {
+            "stationid": "1-GUP0-32",
+            "brandid": "1-257XHLZ",
+            "brand": "Lowes",
+            "code": 1999,
+            "name": "Lowes Mulwala",
+            "address": "55-57 Melbourne Stre, Mulwala NSW 2647",
+            "location": {
+                "latitude": -35.986957,
+                "longitude": 146.007153,
+                "distance": 223.2
             },
             "isAdBlueAvailable": false
         },
@@ -122,7 +122,7 @@
             "location": {
                 "latitude": -36.108156,
                 "longitude": 144.752866,
-                "distance": 176.63
+                "distance": 190.56
             },
             "isAdBlueAvailable": false
         },
@@ -136,7 +136,7 @@
             "location": {
                 "latitude": -36.106522,
                 "longitude": 144.75068,
-                "distance": 176.81
+                "distance": 190.76
             },
             "isAdBlueAvailable": false
         }
@@ -159,6 +159,14 @@
             "lastupdated": "2026-11-13 05:42:24"
         },
         {
+            "stationcode": 693,
+            "fueltype": "U91",
+            "price": 235.9,
+            "priceunit": "litre",
+            "description": null,
+            "lastupdated": "2026-11-15 22:12:25"
+        },
+        {
             "stationcode": 1069,
             "fueltype": "U91",
             "price": 239.9,
@@ -169,10 +177,10 @@
         {
             "stationcode": 1078,
             "fueltype": "U91",
-            "price": 229.9,
+            "price": 224.9,
             "priceunit": "litre",
             "description": null,
-            "lastupdated": "2026-11-13 03:56:07"
+            "lastupdated": "2026-11-17 05:56:14"
         },
         {
             "stationcode": 1999,
@@ -185,10 +193,10 @@
         {
             "stationcode": 2106,
             "fueltype": "U91",
-            "price": 249.9,
+            "price": 239.9,
             "priceunit": "litre",
             "description": null,
-            "lastupdated": "2026-11-09 23:30:05"
+            "lastupdated": "2026-11-18 02:15:06"
         },
         {
             "stationcode": 17252,
@@ -209,18 +217,10 @@
         {
             "stationcode": 18352,
             "fueltype": "U91",
-            "price": 236.9,
+            "price": 232.9,
             "priceunit": "litre",
             "description": null,
-            "lastupdated": "2026-11-16 20:37:05"
-        },
-        {
-            "stationcode": 20929,
-            "fueltype": "U91",
-            "price": 224.5,
-            "priceunit": "litre",
-            "description": null,
-            "lastupdated": "2026-11-15 22:43:39"
+            "lastupdated": "2026-11-17 20:32:25"
         }
     ]
 }
